@@ -1,0 +1,42 @@
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">Alerts</div>
+	  <!-- Table -->
+	  <form ng-submit="saveData()">
+	  	
+		  <table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Message</th>
+					<th>Date</th>
+					<th>Type(DEBUG)</th>
+					<th>Type</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="alert in alerts">
+					<td>{{ alert.id }}</td>
+					<td>{{ alert.name }}</td>
+					<td>{{ alert.message }}</td>
+					<td>{{ alert.date }}</td>
+					<td>{{ alert.alertType }}</td>
+					<td>
+	            		<select name="alertType" data-ng-model="alert.alertType" 
+	            								 data-ng-options="type.id as type.title for type in alertTypes">
+	            			<option value=""></option>
+	            		</select>										
+					</td>
+				</tr>
+			</tbody>
+		  </table>
+		<input type="submit" value="Submit" class="btn btn-primary" ng-disabled="!isDataValid()">	  	  
+		</form>	  
+	</div>
+	
+	<button class="btn btn-success" ng-disabled="!isDataValid()">
+		<span class="glyphicon glyphicon-save"></span>  Save Changes
+	</button>
+	
+</div>

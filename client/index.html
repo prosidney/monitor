@@ -1,0 +1,39 @@
+<html ng-app='monitor'>
+    <head>
+        <title>SSR</title>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        
+        <script src="libs/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="libs/bootstrap.min.js"></script>		
+			
+		<link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body ng-app>
+    	  <div class="well well-sm" style="margin-bottom:2px">
+		      <ul class="nav nav-tabs">
+		        <li role="presentation" data-toggle="tab"><a ui-sref="alerts">Alerts</a></li>
+		        <li role="presentation" data-toggle="tab"><a ui-sref="settings">Settings</a></li>
+		      </ul>
+    	  </div>
+		
+		  <div ui-view></div>            
+		  
+		  <script src="libs/angular.min.js"></script>		    
+  		  <script src="libs/angular-ui-router.min.js"></script>
+  		  <script src="libs/jquery.min.js"></script>
+  		  <script src="monitor-pathfinder.js"></script>
+
+    </body>
+    
+</html>
